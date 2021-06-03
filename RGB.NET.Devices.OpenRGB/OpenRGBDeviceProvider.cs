@@ -23,7 +23,7 @@ namespace RGB.NET.Devices.OpenRGB
         public bool ForceAddAllDevices { get; set; }
         public bool SetDirectModeIfAvailable { get; set; } = true;
 
-        public RGBDeviceType PerZoneDeviceFlag { get; } = RGBDeviceType.LedStripe | RGBDeviceType.Mainboard;
+        public RGBDeviceType PerZoneDeviceFlag { get; } = RGBDeviceType.LedStripe | RGBDeviceType.Mainboard | RGBDeviceType.Speaker;
 
         #endregion
 

@@ -67,9 +67,18 @@ namespace RGB.NET.Devices.OpenRGB
                 {
                     Device? device = openRgb.GetControllerData(i);
 
-                    //if the device doesn't have a direct mode, don't add it
-                    if (!device.Modes.Any(m => m.Name == "Direct") && !ForceAddAllDevices)
+                    int directModeIndex = Array.FindIndex(device.Modes, device => device.Name == "Direct");
+                    if (directModeIndex != -1)
+                    {
+                        //set the device to direct mode if it has it
+                        openRgb.SetMode(i, directModeIndex);
+                    }
+                    else if (!ForceAddAllDevices)
+                    {
+                        //if direct mode does not exist
+                        //and if we're not forcing, continue to the next device.
                         continue;
+                    }
 
                     OpenRGBUpdateQueue? updateQueue = new OpenRGBUpdateQueue(GetUpdateTrigger(), i, openRgb, device);
 

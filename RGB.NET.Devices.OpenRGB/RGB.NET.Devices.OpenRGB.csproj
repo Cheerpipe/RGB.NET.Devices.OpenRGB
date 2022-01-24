@@ -1,22 +1,26 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFrameworks>net6.0;net5.0</TargetFrameworks>
     <LangVersion>latest</LangVersion>
-	<Nullable>enable</Nullable>
+    <Nullable>enable</Nullable>
+    
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    
+    <Version>0.0.1</Version>
+    <AssemblyVersion>0.0.1</AssemblyVersion>
+    <FileVersion>0.0.1</FileVersion>
+
     <OutputPath>..\bin\</OutputPath>
-    <Platforms>x64</Platforms>
-    <GenerateDependencyFile>False</GenerateDependencyFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSource>True</IncludeSource>
+    <IncludeSymbols>True</IncludeSymbols>
+    <DebugType>portable</DebugType>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="RGB.NET.Core" Version="1.0.0-prerelease.11" />
     <PackageReference Include="OpenRGB.NET" Version="1.7.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="RGB.NET.Core">
-      <HintPath>..\..\RGB.NET\bin\net5.0\RGB.NET.Core.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

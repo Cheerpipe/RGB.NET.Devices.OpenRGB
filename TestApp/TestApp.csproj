@@ -1,29 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
-    <LangVersion>latest</LangVersion>
-    <Platforms>x64</Platforms>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\RGB.NET.Devices.OpenRGB\RGB.NET.Devices.OpenRGB.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="RGB.NET.Core">
-      <HintPath>..\..\RGB.NET\bin\net5.0\RGB.NET.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="RGB.NET.Devices.Wooting">
-      <HintPath>..\..\RGB.NET\bin\net5.0\RGB.NET.Devices.Wooting.dll</HintPath>
-    </Reference>
-    <Reference Include="RGB.NET.Layout">
-      <HintPath>..\..\RGB.NET\bin\net5.0\RGB.NET.Layout.dll</HintPath>
-    </Reference>
-    <Reference Include="RGB.NET.Presets">
-      <HintPath>..\..\RGB.NET\bin\net5.0\RGB.NET.Presets.dll</HintPath>
-    </Reference>
+    <PackageReference Include="RGB.NET.Presets" Version="1.0.0-prerelease1" />
   </ItemGroup>
 
 </Project>

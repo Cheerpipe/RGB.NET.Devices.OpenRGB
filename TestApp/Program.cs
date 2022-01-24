@@ -1,6 +1,5 @@
 ﻿using RGB.NET.Core;
 using RGB.NET.Devices.OpenRGB;
-using RGB.NET.Devices.Wooting;
 using RGB.NET.Presets.Decorators;
 using RGB.NET.Presets.Textures;
 using RGB.NET.Presets.Textures.Gradients;
@@ -19,8 +18,7 @@ namespace TestApp
 
                 List<IRGBDeviceProvider> deviceProviders = new List<IRGBDeviceProvider>
                 {
-                    OpenRGBDeviceProvider.Instance,
-                    WootingDeviceProvider.Instance
+                    OpenRGBDeviceProvider.Instance
                 };
 
                 using RGBSurface surface = new RGBSurface();

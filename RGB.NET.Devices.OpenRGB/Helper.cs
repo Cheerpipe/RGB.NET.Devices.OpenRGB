@@ -36,6 +36,7 @@ namespace RGB.NET.Devices.OpenRGB
             DeviceType.Mouse => RGBDeviceType.Mouse,
             DeviceType.Mousemat => RGBDeviceType.Mousepad,
             DeviceType.Headset => RGBDeviceType.Headset,
+            DeviceType.Speaker=>RGBDeviceType.Speaker,
             DeviceType.HeadsetStand => RGBDeviceType.HeadsetStand,
             _ => RGBDeviceType.Unknown
         };
